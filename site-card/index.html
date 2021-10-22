@@ -1,36 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <meta charset="UTF-8">
     <title>Site-card</title>
     <link rel="stylesheet" href="styles/main.css">
+    <script type="text/javascript" src="scripts/changeTheme.js"></script>
 </head>
 <body>
 <div class="site-card">
     <article class="developer-info">
         <section class="main-developer-info">
             <div class="logo-circle main-developer-info__logo-circle"></div>
-            <h2 class="full-name main-developer-info__full-name">Alex Smith</h2> <!--!-->
-            <h4 class="employment main-developer-info__employment">Web Designer</h4> <!--!-->
+            <h2 class="full-name main-developer-info__full-name">Alex Smith</h2>
+            <h4 class="employment main-developer-info__employment">Web Designer</h4>
             <ul class="abilities main-developer-info__abilities">
                 <li class="abilities__item"></li>
                 <li class="abilities__item"></li>
                 <li class="abilities__item"></li>
             </ul>
-            <div class="main-developer-info__download-button-wrapper"> <!--!-->
-                <a href="#" class="download-cv-link main-developer-info__download-cv-link" download> <!--!-->
-                    <button class="download-cv-link__button">Download CV</button> <!--!-->
+            <div class="main-developer-info__download-button-wrapper">
+                <a href="#" class="download-cv-link main-developer-info__download-cv-link" download>
+                    <button class="download-cv-link__button">Download CV</button>
                 </a>
             </div>
         </section>
 
-        <footer class="copyright developer-info__copyright"> <!--!-->
+        <footer class="copyright developer-info__copyright">
             <span>©2020 All rights reserved.</span>
         </footer>
     </article>
     <main class="base-info">
-        <h1 class="full-name base-info__full-name">Alex Smith</h1><!--!-->
-        <h4 class="employment base-info__employment">Web Designer</h4><!--!-->
+        <div class="theme-button-wrapper base-info__theme-button-wrapper">
+            <input id="checkbox" type="checkbox" name="checkbox" value="checkbox" class="theme-button-wrapper__input"
+                   onclick="changeTheme()">
+            <label for="checkbox" class="theme-button-wrapper__label"></label>
+        </div>
+        <h1 class="full-name base-info__full-name">Alex Smith</h1>
+        <h4 class="employment base-info__employment">Web Designer</h4>
     </main>
 </div>
 </body>
