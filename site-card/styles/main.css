@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('../fonts/Helvetica.woff') format('woff'),
+    url('../fonts/Helvetica.ttf') format('truetype'),
+    url('../fonts/Helvetica.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: local('Helvetica-Bold'), url('../fonts/Helvetica-Bold.woff') format('woff'),
+    url('../fonts/Helvetica-Bold.ttf') format('truetype'),
+    url('../fonts/Helvetica-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    color: #FFFFFF;
+    line-height: 1.15;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.site-card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: flex;
+    width: 1127px;
+    height: 595px;
+    background: #444;
+    border-radius: 50px;
+}
+
+.developer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
+
+    background: #444;
+    border-radius: 28px 0 0 28px;
+}
+
+
+
+.main-resume-info {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    align-content:flex-start;
+    height: 580px;
+}
+
+.abilities {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: -13px;
+}
+
+.logo-circle {
+    margin-top: 70px;
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+    background: #C4C4C4;
+    box-shadow: 12px 12px #5e5e5e;
+}
+
+.resume-section-full-name {
+    margin-top: 29px;
+    margin-bottom: 0;
+
+    font-family: Helvetica-Bold, sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+}
+
+.resume-section-employment {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 20px;
+    /* overwrite the standard value to for header */
+    font-weight: 400;
+}
+
+.list-element-circle {
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+    list-style-type: none;
+    background: #C4C4C4;
+}
+
+/* Sets the download button in the center */
+.button-download-wrapper{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-link {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.download-button-cv {
+    padding: 9px 29px 31px;
+    height: 43px;
+
+    font-size: 17px;
+    background: #444444;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 40px;
+}
+
+.copyright {
+    margin-top: auto;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.base-info {
+    border-radius: 28px;
+    width: 747px;
+    background: #222;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.main-section-full-name {
+    margin-top: 26px;
+    margin-bottom: 0;
+    font-size: 62px;
+    font-family: Helvetica-Bold, sans-serif;
+}
+
+.main-section-employment {
+    margin-top: 9px;
+    font-size: 22px;
+    /* overwrite the standard value to for header */
+    font-weight: 400;
+}
