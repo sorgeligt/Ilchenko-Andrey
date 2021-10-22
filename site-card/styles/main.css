@@ -196,9 +196,9 @@ body {
 /*theme change button*/
 
 .base-info__theme-button-wrapper {
-    position: absolute;
-    top: 5%;
-    left: 80%;
+    position: relative;
+    bottom: 30%;
+    left: 45%;
 }
 
 .theme-button-wrapper__input {
