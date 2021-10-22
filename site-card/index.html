@@ -8,28 +8,29 @@
 <body>
 <div class="site-card">
     <article class="developer-info">
-        <section class=main-resume-info>
-            <div class="logo-circle"></div>
-            <h2 class="resume-section-full-name">Alex Smith</h2>
-            <h4 class="resume-section-employment">Web Designer</h4>
-            <ul class="abilities">
-                <li class="list-element-circle"></li>
-                <li class="list-element-circle"></li>
-                <li class="list-element-circle"></li>
+        <section class="main-developer-info">
+            <div class="logo-circle main-developer-info__logo-circle"></div>
+            <h2 class="full-name main-developer-info__full-name">Alex Smith</h2> <!--!-->
+            <h4 class="employment main-developer-info__employment">Web Designer</h4> <!--!-->
+            <ul class="abilities main-developer-info__abilities">
+                <li class="abilities__item"></li>
+                <li class="abilities__item"></li>
+                <li class="abilities__item"></li>
             </ul>
-            <div class="button-download-wrapper">
-                <a href="#" class = "download-link" download>
-                    <button class="download-button-cv">Download CV</button>
+            <div class="main-developer-info__download-button-wrapper"> <!--!-->
+                <a href="#" class="download-cv-link main-developer-info__download-cv-link" download> <!--!-->
+                    <button class="download-cv-link__button">Download CV</button> <!--!-->
                 </a>
             </div>
         </section>
-        <footer class="copyright">
+
+        <footer class="copyright developer-info__copyright"> <!--!-->
             <span>©2020 All rights reserved.</span>
         </footer>
     </article>
     <main class="base-info">
-        <h1 class="main-section-full-name">Alex Smith</h1>
-        <h4 class="main-section-employment">Web Designer</h4>
+        <h1 class="full-name base-info__full-name">Alex Smith</h1><!--!-->
+        <h4 class="employment base-info__employment">Web Designer</h4><!--!-->
     </main>
 </div>
 </body>

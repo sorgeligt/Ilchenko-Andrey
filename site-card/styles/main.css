@@ -48,25 +48,16 @@ body {
 }
 
 
-
-.main-resume-info {
+.main-developer-info {
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
-    align-content:flex-start;
+    align-content: flex-start;
     height: 580px;
 }
 
-.abilities {
-    display: flex;
-    align-items: center;
-    padding-left: 0;
-    margin-bottom: -13px;
-}
-
 .logo-circle {
-    margin-top: 70px;
     width: 180px;
     height: 180px;
 
@@ -75,24 +66,37 @@ body {
     box-shadow: 12px 12px #5e5e5e;
 }
 
-.resume-section-full-name {
-    margin-top: 29px;
-    margin-bottom: 0;
-
-    font-family: Helvetica-Bold, sans-serif;
-    font-weight: 700;
-    font-size: 38px;
+.main-developer-info__logo-circle {
+    margin-top: 70px;
 }
 
-.resume-section-employment {
-    margin-top: 8px;
+.full-name {
+    font-family: Helvetica-Bold, sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.main-developer-info__full-name {
+    margin-top: 29px;
     margin-bottom: 0;
+}
+
+.employment {
     font-size: 20px;
-    /* overwrite the standard value to for header */
     font-weight: 400;
 }
 
-.list-element-circle {
+.main-developer-info__employment {
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.abilities {
+    display: flex;
+    align-items: center;
+}
+
+.abilities__item {
     margin-right: 5px;
     margin-left: 5px;
     width: 24px;
@@ -103,34 +107,46 @@ body {
     background: #C4C4C4;
 }
 
+.main-developer-info__abilities {
+    padding-left: 0;
+    margin-bottom: -13px;
+}
+
 /* Sets the download button in the center */
-.button-download-wrapper{
+.main-developer-info__download-button-wrapper {
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     align-items: center;
 }
 
-.download-link {
+.download-cv-link {
+    /* no common properties */
+    /* can be added later */
+}
+
+.main-developer-info__download-cv-link {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.download-button-cv {
-    padding: 9px 29px 31px;
+.download-cv-link__button {
     height: 43px;
-
     font-size: 17px;
     background: #444444;
     color: #FFFFFF;
     border: 3px solid #FFFFFF;
     border-radius: 40px;
+    padding: 9px 29px 31px;
 }
 
 .copyright {
+    font-size: 14px;
+}
+
+.developer-info__copyright {
     margin-top: auto;
     margin-bottom: 14px;
-    font-size: 14px;
 }
 
 .base-info {
@@ -145,17 +161,13 @@ body {
     text-align: center;
 }
 
-
-.main-section-full-name {
+.base-info__full-name {
     margin-top: 26px;
     margin-bottom: 0;
     font-size: 62px;
-    font-family: Helvetica-Bold, sans-serif;
 }
 
-.main-section-employment {
+.base-info__employment {
     margin-top: 9px;
     font-size: 22px;
-    /* overwrite the standard value to for header */
-    font-weight: 400;
 }
