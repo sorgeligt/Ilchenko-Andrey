@@ -1,17 +1,17 @@
 @font-face {
     font-family: 'Helvetica';
-    src: local('Helvetica'), url('../fonts/Helvetica.woff') format('woff'),
-    url('../fonts/Helvetica.ttf') format('truetype'),
-    url('../fonts/Helvetica.woff2') format('woff2');
+    src: local('Helvetica'), url('./fonts/Helvetica.woff') format('woff'),
+    url('./fonts/Helvetica.ttf') format('truetype'),
+    url('./fonts/Helvetica.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Helvetica-Bold';
-    src: local('Helvetica-Bold'), url('../fonts/Helvetica-Bold.woff') format('woff'),
-    url('../fonts/Helvetica-Bold.ttf') format('truetype'),
-    url('../fonts/Helvetica-Bold.woff2') format('woff2');
+    src: local('Helvetica-Bold'), url('./fonts/Helvetica-Bold.woff') format('woff'),
+    url('./fonts/Helvetica-Bold.ttf') format('truetype'),
+    url('./fonts/Helvetica-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
 }
@@ -207,7 +207,7 @@ body {
 
 .theme-button-wrapper__label {
     cursor: pointer;
-    background: var(--base-info-color) url(../image/white-moon.svg) no-repeat center;
+    background: var(--base-info-color) url(./assets/white-moon.svg) no-repeat center;
     display: block;
     width: 35px;
     height: 35px;
@@ -222,7 +222,6 @@ body {
 }
 
 .theme-button-wrapper__input:checked + .theme-button-wrapper__label {
-    background: var(--base-info-color) url(../image/sun.svg) no-repeat center;
+    background: var(--base-info-color) url(./assets/sun.svg) no-repeat center;
     background-size: 95%;
 }
-
