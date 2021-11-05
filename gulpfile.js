@@ -5,7 +5,7 @@ const inject = require('gulp-inject');
 const rollup = require('rollup');
 const image = require('gulp-image');
 
-const assetsPath = 'src/assets/*';
+const assetsSvgPath = 'src/assets/*.svg';
 const fontsPath = 'src/fonts/*';
 const stylesPath = './src/styles/**/*.scss';
 const jsPath = 'src/**/*.js';
@@ -55,7 +55,7 @@ gulp.task('watch', function (done) {
 
 
 gulp.task('assets', function () {
-    return gulp.src(assetsPath)
+    return gulp.src(assetsSvgPath)
         .pipe(image(imageOptimizingSettings))
         .pipe(gulp.dest(`${distPath}/assets/`));
 });
