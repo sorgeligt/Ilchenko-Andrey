@@ -4,13 +4,16 @@ const less = require('gulp-less');
 const inject = require('gulp-inject');
 const rollup = require('rollup');
 const image = require('gulp-image');
+const modifyCssUrls = require('gulp-modify-css-urls');
 
-const assetsSvgPath = 'src/assets/*.svg';
-const fontsPath = 'src/fonts/*';
+const assetsPath = 'src/assets/*.{svg,png,jpeg,gif}';
+const fontsPath = 'src/assets/fonts/*.{ttf,woff,woff2}';
 const stylesPath = './src/styles/**/*.scss';
 const jsPath = 'src/**/*.js';
 const htmlPath = './src/index.html';
 const distPath = './dist/';
+const styleDistPath = 'dist/style.css'
+
 const rollupConfig = {
     input: 'src/app.js',
     plugins: [
@@ -55,15 +58,25 @@ gulp.task('watch', function (done) {
 
 
 gulp.task('assets', function () {
-    return gulp.src(assetsSvgPath)
+    return gulp.src(assetsPath)
         .pipe(image(imageOptimizingSettings))
         .pipe(gulp.dest(`${distPath}/assets/`));
 });
 
 gulp.task('fonts', function () {
     return gulp.src(fontsPath)
-        .pipe(gulp.dest(`${distPath}/fonts/`));
+        .pipe(gulp.dest(`${distPath}/assets/fonts`));
 });
+
+gulp.task('modifyUrls', () =>
+    gulp.src(styleDistPath)
+        .pipe(modifyCssUrls({
+            modify(url) {
+                return url.substr(3);
+            },
+        }))
+        .pipe(gulp.dest(distPath))
+);
 
 
 gulp.task('html', function () {
@@ -74,5 +87,5 @@ gulp.task('html', function () {
         .pipe(gulp.dest(distPath));
 });
 
-gulp.task('default', gulp.series('rollup', 'css', 'assets', 'fonts', 'html', 'watch'));
-gulp.task('build', gulp.series('rollup', 'css', 'assets', 'fonts', 'html'));
+gulp.task('default', gulp.series('rollup', 'css', 'assets' ,'fonts', 'modifyUrls', 'html', 'watch'));
+gulp.task('build', gulp.series('rollup', 'css', 'assets', 'fonts', 'modifyUrls', 'html'));

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: local('Helvetica'), url('../assets/fonts/Helvetica.woff') format('woff'),
+  url('../assets/fonts/Helvetica.ttf') format('truetype'),
+  url('../assets/fonts/Helvetica.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: local('Helvetica-Bold'), url('../assets/fonts/Helvetica-Bold.woff') format('woff'),
+  url('../assets/fonts/Helvetica-Bold.ttf') format('truetype'),
+  url('../assets/fonts/Helvetica-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
