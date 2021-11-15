@@ -16,8 +16,7 @@ const styleDistPath = 'dist/style.css'
 
 const rollupConfig = {
     input: 'src/app.js',
-    plugins: [
-    ]
+    plugins: []
 }
 
 const imageOptimizingSettings = {
@@ -87,5 +86,5 @@ gulp.task('html', function () {
         .pipe(gulp.dest(distPath));
 });
 
-gulp.task('default', gulp.series('rollup', 'css', 'assets' ,'fonts', 'modifyUrls', 'html', 'watch'));
+gulp.task('default', gulp.series('rollup', 'css', 'assets', 'fonts', 'modifyUrls', 'html', 'watch'));
 gulp.task('build', gulp.series('rollup', 'css', 'assets', 'fonts', 'modifyUrls', 'html'));
