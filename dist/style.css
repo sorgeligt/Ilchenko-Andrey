@@ -1,3 +1,220 @@
+.base-info__theme-button-wrapper {
+  position: relative;
+  bottom: 30%;
+  left: 45%;
+}
+
+.theme-button-wrapper__input {
+  display: none;
+}
+
+.theme-button-wrapper__label {
+  cursor: pointer;
+  background: var(--base-info-color) url("assets/white-moon.svg") no-repeat center;
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+}
+
+.theme-button-wrapper__label:hover {
+  -webkit-transform: rotate(360deg) scale(1.4);
+  transform: rotate(360deg) scale(1.4);
+}
+
+.theme-button-wrapper__input:checked + .theme-button-wrapper__label {
+  background: var(--base-info-color) url("assets/sun.svg") no-repeat center;
+  background-size: 95%;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: local('Helvetica'), url("assets/fonts/Helvetica.woff") format('woff'), url("assets/fonts/Helvetica.ttf") format('truetype'), url("assets/fonts/Helvetica.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: local('Helvetica-Bold'), url("assets/fonts/Helvetica-Bold.woff") format('woff'), url("assets/fonts/Helvetica-Bold.ttf") format('truetype'), url("assets/fonts/Helvetica-Bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --main-text-color: #FFFFFF;
+  --developer-info-background-color: #444444;
+  --logo-circle-color: #C4C4C4;
+  --logo-circle-shadow-color: #5e5e5e;
+  --abilities-items-color: #C4C4C4;
+  --base-info-color: #222222;
+}
+
+.light-mode {
+  --main-text-color: rgba(37, 37, 37, 0.92);
+  --developer-info-background-color: #adabab;
+  --base-info-color: #89898c;
+  --logo-circle-color: #8f8d8d;
+  --logo-circle-shadow-color: #6d6d70;
+  --abilities-items-color: rgba(56, 56, 56, 0.51);
+}
+
+body {
+  background: #edeef0;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  color: var(--main-text-color);
+  line-height: 1.15;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.site-card {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  display: flex;
+  width: 1127px;
+  height: 595px;
+  background: var(--developer-info-background-color);
+  border-radius: 50px;
+}
+
+.developer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  background: var(--developer-info-background-color);
+  border-radius: 28px 0 0 28px;
+}
+
+.main-developer-info {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  align-content: flex-start;
+  height: 580px;
+}
+
+.logo-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--logo-circle-color);
+  box-shadow: 12px 12px var(--logo-circle-shadow-color);
+}
+
+.main-developer-info__logo-circle {
+  margin-top: 70px;
+}
+
+.full-name {
+  font-family: Helvetica-Bold, sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.main-developer-info__full-name {
+  margin-top: 29px;
+  margin-bottom: 0;
+}
+
+.employment {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.main-developer-info__employment {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.abilities {
+  display: flex;
+  align-items: center;
+}
+
+.abilities__item {
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  list-style-type: none;
+  background: var(--abilities-items-color);
+}
+
+.main-developer-info__abilities {
+  padding-left: 0;
+  margin-bottom: -13px;
+}
+
+/* Sets the download button in the center */
+
+.main-developer-info__download-button-wrapper {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.download-cv-link {
+  /* no common properties */
+  /* can be added later */
+}
+
+.main-developer-info__download-cv-link {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.download-cv-link__button {
+  cursor: pointer;
+  height: 43px;
+  font-size: 17px;
+  background: var(--developer-info-background-color);
+  color: var(--main-text-color);
+  border: 3px solid var(--main-text-color);
+  border-radius: 40px;
+  padding: 9px 29px 31px;
+}
+
+.copyright {
+  font-size: 14px;
+}
+
+.developer-info__copyright {
+  margin-top: auto;
+  margin-bottom: 14px;
+}
+
+.base-info {
+  border-radius: 28px;
+  width: 747px;
+  background: var(--base-info-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.base-info__full-name {
+  margin-top: 26px;
+  margin-bottom: 0;
+  font-size: 62px;
+}
+
+.base-info__employment {
+  margin-top: 9px;
+  font-size: 22px;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
