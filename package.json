@@ -17,6 +17,7 @@
     "gulp-inject": "^5.0.5",
     "gulp-less": "^5.0.0",
     "gulp-modify-css-urls": "^2.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "rollup": "^2.59.0",
     "sass": "^1.43.2"
   },

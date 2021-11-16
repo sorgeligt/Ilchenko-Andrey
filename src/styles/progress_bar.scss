@@ -1,0 +1,42 @@
+
+body {
+  background-color: #f4f4f4;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.progress {
+
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 10px ;
+  height: 30px;
+  width: 300px;
+}
+
+.progress-done {
+  background: linear-gradient(to left, #2368ff, #9bacff);
+  -webkit-box-shadow: 0 0 24px 3px rgba(12, 132, 224, 0.55);
+  -moz-box-shadow: 0 0 24px 3px rgba(12, 132, 224, 0.55);
+  box-shadow: 0 0 24px 3px rgba(12, 132, 224, 0.55);
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 1;
+}
+
+.elem_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

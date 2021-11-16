@@ -31,11 +31,25 @@
     </article>
     <main class="base-info">
         <div class="theme-button-wrapper base-info__theme-button-wrapper">
-            <input id="checkbox_theme" type="checkbox" name="checkbox" value="checkbox" class="theme-button-wrapper__input">
+            <input id="checkbox_theme" type="checkbox" name="checkbox" value="checkbox"
+                   class="theme-button-wrapper__input">
             <label for="checkbox_theme" class="theme-button-wrapper__label"></label>
         </div>
-        <h1 class="full-name base-info__full-name">Alex Smith</h1>
-        <h4 class="employment base-info__employment">Web Designer</h4>
+
+        <form id="content">
+            <input type="text" name="input" class="input" id="search-input">
+            <button type="reset" class="search plus" id="search-btn"></button>
+        </form>
+        <ul>
+            <li class="elem_wrapper">
+                HTML:
+                <div class="progress" >
+                    <div class="progress-done" style="width: 70%">
+                        70%
+                    </div>
+                </div>
+            </li>
+        </ul>
     </main>
 </div>
 
