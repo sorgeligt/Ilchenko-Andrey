@@ -1,7 +1,7 @@
 #content {
   height: 50px;
   width: 300px;
-  transform: translate(-50%, -50%);
+  transform: translate(130%, 0%);
 }
 
 input {
@@ -39,9 +39,6 @@ input {
   border: 0;
   color: inherit;
   cursor: pointer;
-  -webkit-transform: translate(-100%, -50%);
-  -ms-transform: translate(-100%, -50%);
-  transform: translate(-100%, -50%);
 }
 @keyframes pulse {
   0% {
@@ -141,4 +138,8 @@ input {
   -webkit-transform: translate(-100%, -50%);
   -ms-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
+}
+
+.hidden{
+  opacity: 0;
 }
