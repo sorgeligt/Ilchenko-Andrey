@@ -193,7 +193,7 @@ body {
   flex-direction: column;
 }
 
-.h-skills {
+.base-info__skills-header {
   position: absolute;
   margin-left: 4%;
   margin-top: 30px;

@@ -155,11 +155,10 @@ body {
   display: flex;
   flex-direction: column;
 
-}
-
-.h-skills {
-  position: absolute;
-  margin-left: 4%;
-  margin-top: 30px;
-  font-size: 50px;
+  &__skills-header {
+    position: absolute;
+    margin-left: 4%;
+    margin-top: 30px;
+    font-size: 50px;
+  }
 }
