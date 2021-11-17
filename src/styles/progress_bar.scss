@@ -1,0 +1,59 @@
+:root{
+  --progress-bar-color1:#2368ff;
+  --progress-bar-color2: #9bacff;
+  --progress-bar-shadow-color:rgba(12, 132, 224, 0.55);
+}
+
+.light-mode{
+  --progress-bar-color1: rgba(35, 104, 255, 0.61);
+  --progress-bar-color2: rgba(176, 188, 255, 0.61);
+  --progress-bar-shadow-color: rgba(12, 132, 224, 0.17);
+}
+
+.skills-list__progress-wrapper {
+
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 10px ;
+  height: 30px;
+  width: 300px;
+}
+
+.skills-list__progress-done {
+  background: linear-gradient(to left, var(--progress-bar-color1), var(--progress-bar-color2));
+  -webkit-box-shadow: 0 0 24px 3px rgba(12, 132, 224, 0.55);
+  -moz-box-shadow: 0 0 24px 3px rgba(12, 132, 224, 0.55);
+  box-shadow: 0 0 24px 3px rgba(12, 132, 224, 0.55);
+  border-radius: 20px;
+  font-size: 15px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 1;
+}
+
+.skills-list__elem{
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.skills-list__delete-btn{
+  display: none;
+}
+.skills-list__label-delete-btn{
+  cursor: pointer;
+  background: url(../assets/trash.svg) no-repeat center;
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+

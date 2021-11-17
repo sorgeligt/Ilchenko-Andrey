@@ -1,0 +1,30 @@
+.theme-button-wrapper {
+  &__input {
+    display: none;
+  }
+  &__input:checked + &__label{
+    background: var(--base-info-color) url(../assets/sun.svg) no-repeat center;
+    background-size: 95%;
+  }
+
+  &__label {
+    cursor: pointer;
+    background: var(--base-info-color) url(../assets/white-moon.svg) no-repeat center;
+    display: block;
+    width: 35px;
+    height: 35px;
+    -webkit-transition: -webkit-transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;
+
+    &:hover {
+      -webkit-transform: rotate(360deg) scale(1.4);
+      transform: rotate(360deg) scale(1.4);
+    }
+  }
+}
+
+.base-info__theme-button-wrapper{
+  align-self: flex-end;
+  margin-right: 3%;
+  margin-bottom: 3%;
+}
