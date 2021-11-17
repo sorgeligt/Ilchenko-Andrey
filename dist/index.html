@@ -31,29 +31,50 @@
         </footer>
     </article>
     <main class="base-info">
+        <h1 class="h-skills">My Skills </h1>
+        <form id="skill-input-form" class = "skill-input-form">
+            <div class="skill-input-form__inputs-wrapper">
+                <input type="text" name="input" class="input input__first" id="skill-input" autocomplete="off"
+                       placeholder="Skill" disabled required maxlength="17">
+                <input type="number" name="input" class="input input__second" id="percent-input" autocomplete="off"
+                       placeholder="Percent" disabled required min = "0" max="100">
+            </div>
+            <button class="js-submit-button" hidden="true" type="submit"></button>
+            <button type="reset" class="skill-input-form__add-button" id="add-skill-btn"></button>
+        </form>
+        <ul id="skills-list">
+            <li class="skills-list__elem">
+                JAVA:
+                <div style="flex: 1"></div>
+                <div class="skills-list__progress-wrapper">
+                    <div class="skills-list__progress-done" style="width: 10%">
+                        10%
+                    </div>
+                </div>
+                <input id="checkbox-del2" type="checkbox"  width="100px" alt=""
+                       class="skills-list__delete-btn"/>
+                <label for="checkbox-del2" class="skills-list__label-delete-btn"></label>
+            </li>
+            <li class="skills-list__elem">
+                HTML:
+                <div style="flex: 1"></div>
+                <div class="skills-list__progress-wrapper">
+                    <div class="skills-list__progress-done" style="width: 60%">
+                        60%
+                    </div>
+                </div>
+                <input id="checkbox-del1" type="checkbox"  width="100px" alt=""
+                       class="skills-list__delete-btn"/>
+                <label for="checkbox-del1" class="skills-list__label-delete-btn"></label>
+            </li>
+        </ul>
+
+        <div style="flex: 1"></div>
         <div class="theme-button-wrapper base-info__theme-button-wrapper">
             <input id="checkbox_theme" type="checkbox" name="checkbox" value="checkbox"
                    class="theme-button-wrapper__input">
             <label for="checkbox_theme" class="theme-button-wrapper__label"></label>
         </div>
-
-        <form id="content">
-            <div style="display: flex">
-                <input type="text" name="input" class="input hidden" id="search-input2">
-                <input type="text" name="input" class="input hidden" id="search-input3">
-            </div>
-            <button type="reset" class="search plus" id="search-btn"></button>
-        </form>
-        <ul>
-            <li class="elem_wrapper">
-                HTML:
-                <div class="progress" >
-                    <div class="progress-done" style="width: 70%">
-                        70%
-                    </div>
-                </div>
-            </li>
-        </ul>
     </main>
 </div>
 

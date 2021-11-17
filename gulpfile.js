@@ -4,7 +4,8 @@ const less = require('gulp-less');
 const inject = require('gulp-inject');
 const image = require('gulp-image');
 const modifyCssUrls = require('gulp-modify-css-urls');
-const ts = require("gulp-typescript");
+const ts = require('gulp-typescript');
+const sourcemaps = require('gulp-sourcemaps');
 
 const assetsPath = 'src/assets/*.{svg,png,jpeg,gif}';
 const fontsPath = 'src/assets/fonts/*.{ttf,woff,woff2}';
@@ -28,11 +29,11 @@ gulp.task('scripts', function () {
     const tsResult = gulp.src(typeScriptPath)
         .pipe(ts({
             noImplicitAny: true,
-            out: "app.js"
+            out: "app.js",
+            module: "system"
         }));
     return tsResult.js.pipe(gulp.dest(distPath));
 });
-
 
 gulp.task('css', () => {
     return gulp.src(stylesPath)
@@ -48,7 +49,6 @@ gulp.task('watch', function (done) {
     gulp.watch(htmlPath, gulp.series('html'));
     done();
 });
-
 
 gulp.task('assets', function () {
     return gulp.src(assetsPath)
