@@ -4,13 +4,14 @@ const less = require('gulp-less');
 const inject = require('gulp-inject');
 const image = require('gulp-image');
 const modifyCssUrls = require('gulp-modify-css-urls');
-const ts = require('gulp-typescript');
-const sourcemaps = require('gulp-sourcemaps');
+const browserify = require("browserify");
+const tsify = require("tsify");
+const source = require('vinyl-source-stream');
 
 const assetsPath = 'src/assets/*.{svg,png,jpeg,gif}';
 const fontsPath = 'src/assets/fonts/*.{ttf,woff,woff2}';
 const stylesPath = './src/styles/**/*.scss';
-const typeScriptPath = "src/*.ts";
+const typeScriptPath = "src/scripts/*.ts";
 const htmlPath = './src/index.html';
 const distPath = './dist/';
 const styleDistPath = 'dist/style.css'
@@ -26,15 +27,18 @@ const imageOptimizingSettings = {
 };
 
 gulp.task('scripts', function () {
-    const tsResult = gulp.src(typeScriptPath)
-        .pipe(ts({
-            noImplicitAny: true,
-            out: "app.js",
-            module: "system"
-        }));
-    return tsResult.js.pipe(gulp.dest(distPath));
+    return browserify({
+        basedir: '.',
+        debug: true,
+        entries: ['src/scripts/app.ts', 'src/scripts/interfaces.ts'],
+        cache: {},
+        packageCache: {}
+    })
+        .plugin(tsify)
+        .bundle()
+        .pipe(source('app.js'))
+        .pipe(gulp.dest("dist"));
 });
-
 gulp.task('css', () => {
     return gulp.src(stylesPath)
         .pipe(less())
