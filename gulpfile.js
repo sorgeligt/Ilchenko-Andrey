@@ -39,6 +39,7 @@ gulp.task('scripts', function () {
         .pipe(source('app.js'))
         .pipe(gulp.dest("dist"));
 });
+
 gulp.task('css', () => {
     return gulp.src(stylesPath)
         .pipe(less())
@@ -46,9 +47,8 @@ gulp.task('css', () => {
         .pipe(gulp.dest(distPath));
 });
 
-
 gulp.task('watch', function (done) {
-    gulp.watch(stylesPath, gulp.series(['css','modifyUrls']));
+    gulp.watch(stylesPath, gulp.series(['css', 'modifyUrls']));
     gulp.watch(typeScriptPath, gulp.series('scripts'));
     gulp.watch(htmlPath, gulp.series('html'));
     done();
