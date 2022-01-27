@@ -30,7 +30,8 @@ gulp.task('scripts', function () {
     return browserify({
         basedir: '.',
         debug: true,
-        entries: ['src/scripts/app.ts', 'src/scripts/interfaces.ts'],
+        entries: ['src/scripts/app.ts', 'src/scripts/interfaces.ts', 'src/scripts/theme.ts',
+            'src/scripts/buttonThemeAnimation.ts', 'src/scripts/skillList.ts'],
         cache: {},
         packageCache: {}
     })

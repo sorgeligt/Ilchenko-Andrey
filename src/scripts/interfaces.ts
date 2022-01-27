@@ -16,11 +16,19 @@ export interface ProgressList {
     inputValidateListener(): void;
 }
 
+
 export interface Conserved {
     localStorageName: string;
 
-    loadLocalStorage(): void;
+    loadLocalStorage(listWrapperElements: HTMLElement): void;
 
-    saveLocalStorage(): void;
+    saveLocalStorage(listWrapperElements: HTMLElement): void;
 }
 
+export interface SimpleEventListener {
+    deleteListener(): void;
+
+    submitListener(): void;
+
+    inputValidateListener(): void;
+}
